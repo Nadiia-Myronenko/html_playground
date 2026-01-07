@@ -1,0 +1,14 @@
+<books>
+    <book id="123">
+        <title>Backen ohne Mehl</title>
+        <year content="2015"/>
+    </book>
+    <book id="124">
+        <title>Noch etwas</title>
+        <year content="2010"/>
+    </book>
+    <book id="125">
+        <title>Sport für Alle</title>
+        <year content="2000"/>
+    </book>
+</books>
