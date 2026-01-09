@@ -7,10 +7,84 @@
 </head>
 <body>
     <main>
-        <form action="">
-            <label for="">E-Mail</label>
-                <!-- input:text (emet)-->
-                <input type="text" name="" id="">
+        <form action="#" method="get">
+            <fieldset>
+                <legend>Persönliches</legend>
+                <div>
+                    <label for="email">E-Mail</label>
+                        <!-- input:text (emet)-->
+                    <input type="text" name="email" id="email" required placeholder="E-Mail">
+                </div>
+                <div>
+                    <input type="radio" name="anrede" id="anrede_w">
+                    <label for="anrede_w">Frau</label>
+                    <br>
+                    <input type="radio" name="anrede" id="anrede_m">
+                    <label for="anrede_m">Herr</label>
+                    <br>
+                    <input type="radio" name="anrede" id="anrede_d">
+                    <label for="anrede_m">Divers</label>
+                    <br>
+                    <input type="radio" name="anrede" id="anrede_k">
+                    <label for="anrede_m">Keine Angabe</label>
+                </div>
+                <div>
+                    <label for="name">Name</label>
+                        <!-- input:text (emet)-->
+                    <input type="text" name="name" id="name" required placeholder="Name">
+                </div>
+                <div>
+            </fieldset>
+                <label for="land">Land</label>
+                <select name="land" id="land">
+                    <optgroup label="Europa">
+                        <option value="DE">Deutschland</option>
+                        <option value="FR">Frankreich</option>
+                        <option value="UKR">Ukraine</option>
+                        <option value="RU">Russland</option>
+                        <option value="PL">Poland</option>
+                    </optgroup>
+                    <optgroup label="Afrika">
+                        <option value="Sambia">Sambia</option>
+                        <option value="SuedAfr">Süd Afrika</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div>
+                <input type="checkbox" name="interessen[]" value="sport" id="interessen_sport">
+                <label for="interessen_sport">Sport</label>
+                <br>
+                <input type="checkbox" name="interessen[]" value="wirtschaft" id="wirtschaft">
+                <label for="interessen_wirtschaft">Wirtschaft</label>
+                <br>
+                <input type="checkbox" name="interessen[]" value="politik" id="interessen_politik">
+                <label for="interessen_politik">politik</label>
+                <br>
+                <input type="checkbox" name="interessen[]" value="wissenschaft" id="interessen_wissenschaft">
+                <label for="interessen_wissenschaft">Wissenschaft</label>
+
+            </div>
+            <div>
+                <label for="msg">Nachricht</label>
+                    <!-- input:text (emet)-->
+                <textarea name="msg" id="msg" rows="10"></textarea>
+            </div>
+            <div>
+                <label for="color"></label>
+                <input type="color" id="color">
+                <br>
+                <label for="datum"></label>
+                <input type="date" id="datum">
+                <br>
+                <label for="password">Password</label>
+                <input type="password" id="password">
+                <br>
+                <input type="hidden" name="id" id="id" value="1234">
+            </div>
+                <!--<button type="button" disabled>Senden</button>-->
+            <button type="submit">Senden</button>
+           <!-- <input type="submit" value="senden">-->
+                
         </form>
     </main>
 </body>
