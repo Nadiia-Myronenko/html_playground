@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="/bootstrap-5.3.8-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
     <style>
-        #header, #main {
+        #header,
+        #main {
             margin-bottom: 2rem;
         }
 
@@ -24,10 +25,17 @@
         .navbar-brand .logo-name {
             font-size: 1rem;
         }
-        #header .header-input-custom{
+
+        #header .header-input-custom {
             border-radius: 0.375rem;
         }
-        #footer{min-height: 3rem;}
+
+        #footer {
+            min-height: 3rem;
+        }
+        .button-holder{
+            padding-left:1.25rem;
+        }
     </style>
 </head>
 
@@ -75,9 +83,12 @@
                         <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
                         <input class="form-control header-input-custom" type="text" placeholder="Email address">
                     </div>
-                    <div class="input-group">
+                    <div class="input-group mb-2">
                         <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
                         <input class="form-control header-input-custom" type="password" placeholder="Password">
+                    </div>
+                    <div class="button-holder">
+                        <button class="btn btn-primary" type="submit">Anmelden</button>
                     </div>
                 </div>
             </div>
@@ -185,7 +196,9 @@
         </div>
 
     </main>
-    <footer class="container bg-body-tertiary" id="footer"><p>&copy;2026</p></footer>
+    <footer class="container bg-body-tertiary" id="footer">
+        <p>&copy;2026</p>
+    </footer>
 </body>
 
 </html>
