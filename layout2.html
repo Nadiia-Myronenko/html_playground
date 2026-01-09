@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            /* Größe gilt inkl. padding und border */
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 100%;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        #stage {
+            width: 1024px;
+            margin: auto;
+        }
+
+        header,
+        main .col,
+        footer {
+            padding: 1rem;
+        }
+
+        header {
+            background-color: #f00;
+            height: 200px;
+        }
+
+        nav#main-nav {
+            background-color: #f0f;
+            overflow: hidden;
+        }
+
+        nav#main-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav#main-nav ul li {
+            float: left;
+            padding: 1rem;
+        }
+
+        nav#main-nav a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        nav#main-nav a:hover {
+            color: aqua;
+        }
+
+        main {
+            background-color: #0f0;
+            min-height: 200px;
+            overflow: hidden;
+            /* Das ist wenn wir nicht height wollen */
+
+        }
+
+        footer {
+            background-color: #00f;
+            height: 200px;
+        }
+
+        main div.col {
+            border: 1px solid #000;
+            float: left;
+            width: 30%;
+        }
+
+        #center {
+            width: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="stage">
+        <header>Kopf</header>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#">Seite1</a></li>
+                <li><a href="#">Seite2</a></li>
+                <li><a href="#">Seite3</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="col">Links</div>
+            <div class="col" id="center">Mitte</div>
+            <div class="col">Rechts</div>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+
+</html>

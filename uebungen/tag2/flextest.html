@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            min-width: 600px;
+            padding: 1rem;
+        }
+
+        header.container {
+            min-height: 100px;
+            background-color: #a9d9ee;
+            justify-content: space-between;
+        }
+
+        footer.container {
+            min-height: 100px;
+            background-color: #eea9dc;
+            justify-content: center;
+        }
+
+        main.container {
+            min-height: 550px;
+            background-color: #e0eea9;
+        }
+
+        .container .box {
+            width: 100px;
+            height: 100px;
+            padding: 1rem;
+            background-color: #fff;
+            border: 1px solid #888;
+            border-radius: 15px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        <p>Schreibe das HTML für eine Seite mit header main und footer</p>
+        <p>Jeder der Bereich mehrere Spalten haben</p>
+        <p>header: 2 Spalten</p>
+        <p>main: 5 Spalten</p>
+        <p>footer: 3 Spalten</p>
+        <p>Richte die Spalten per Flex-Box aus</p>
+    -->
+    <header class="container">
+        <div class="box">A</div>
+        <div class="box">B</div>
+    </header>
+    <main class="container">
+        <div class="box">C</div>
+        <div class="box">D</div>
+        <div class="box">E</div>
+        <div class="box">F</div>
+        <div class="box">G</div>
+    </main>
+    <footer class="container">
+        <div class="box">H</div>
+        <div class="box">I</div>
+        <div class="box">J</div>
+    </footer>
+</body>
+
+</html>

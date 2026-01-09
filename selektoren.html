@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Tag-Selector */
+        header {
+            background-color:aquamarine;
+        }
+        /* mehrere Elemente */
+        main, footer{
+            padding: 25px;
+        }
+        main div{
+            border: 1px solid #aaa;
+        }
+        /* id */
+        #main-nav{
+            padding: 10px;
+            background-color: #0f0;
+        }
+        /* Klassen n*/
+        .red{
+            color:red
+        }
+    </style>
+</head>
+<body>
+    <!-- (header>nav)+main+footer -->
+    <header><nav id="main-nav"></nav></header>
+    <main><div class="red">ZYX</div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit unde, laborum maxime eveniet non consequuntur eum quisquam, maiores ipsam quod dignissimos explicabo pariatur officiis exercitationem, velit ducimus nobis cum at?</main>
+    <footer></footer>
+</body>
+</html>
