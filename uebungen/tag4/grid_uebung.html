@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+        }
+
+        .grid-container>* {
+            border: 1px solid gray;
+            padding: 10px;
+        }
+
+        .grid-container> :first-child {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 4;
+            background-color: orange;
+        }
+
+        .grid-container> :nth-child(2) {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            background-color: rgb(0, 174, 255);
+        }
+
+        .grid-container> :nth-child(3) {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            background-color: rgb(35, 182, 2);
+        }
+
+        .grid-container> :nth-child(4) {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 4;
+            background-color: magenta;
+        }
+
+        .grid-container> :nth-child(5) {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            background-color: yellow;
+        }
+        .grid-container> :nth-child(6){
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div>First</div>
+        <div>Second</div>
+        <div>Third</div>
+        <div>Fourth</div>
+        <div>Fifth</div>
+        <div>Sixth</div>
+        <div>Seventh</div>
+        <div>Eighth</div>
+        <div>Ninth</div>
+    </div>
+</body>
+
+</html>

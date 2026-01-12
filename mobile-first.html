@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body{
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 100%;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        main{
+            background-color: #ddd;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-bottom: 1px solid #999;
+        }
+        aside{
+            padding: 1rem;
+            border-bottom: 1px solid #aaa;
+        }
+        footer{
+            background-color: #555;
+            padding: 1rem;
+            color:#ddd;
+        }
+        footer a{
+            color:#ddd;
+        }
+        footer a:hover{
+            color:#aaa;
+        }
+        @media (min-width:800px){
+            main{
+                border-bottom: none;
+                margin-bottom: 0%;
+                width: 50%;
+                float:left;
+            }
+            aside {
+                border-bottom: none;
+                margin-bottom: 0%;
+                width: 50%;
+                float:left;
+            }
+            footer{clear:both;}
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <header>
+            <nav>
+                <ul><!--ul>li*4>a{Seite $}-->
+                    <li><a href="#">Seite 1</a></li>
+                    <li><a href="#">Seite 2</a></li>
+                    <li><a href="#">Seite 3</a></li>
+                    <li><a href="#">Seite 4</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro voluptates deserunt ex cupiditate nesciunt omnis! Eaque quo nihil rerum corrupti, eos, id veritatis impedit ea saepe possimus, at ipsa dicta!</p>
+            <p>Blanditiis illo saepe assumenda id quo earum accusamus totam eius quaerat, fugiat dolores officiis? Enim repellendus, porro minima nesciunt ex repudiandae delectus?</p>
+        </main>
+
+        <aside>
+            <h3>Veniam</h3>
+            <p>Veniam architecto, blanditiis ducimus delectus consectetur similique eligendi nam sed quasi est voluptates?</p>
+        </aside>
+
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="#">Seite 1</a></li>
+                    <li><a href="#">Seite 2</a></li>
+                    <li><a href="#">Seite 3</a></li>
+                    <li><a href="#">Seite 4</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>
