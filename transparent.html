@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #bilder1{
+            width: 50vw;
+            height: 50vh;
+            background-image: url(img/purple-butterfly.png), url(img/orange-butterfly.png), url(img/blue-butterfly.png); /* transparent*/
+            /*background-position: 0 0; - gilt für beide Bilder*/
+            background-size: 50px;
+            background-position-x: left, center, right;
+            background-position-y: 0px; /*erstes, zweites */
+            background-repeat: no-repeat;
+            
+        }   
+        #bilder1:hover{
+            background-position-x: right, left, center;
+            transition: all 3s linear;
+        }
+        #circle{
+            background-color: #333;
+            height: 200px;width: 200px;
+            border: 4px solid #fff;
+            box-shadow: 0 0 50px #000;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="bilder1"></div>
+        <div id="circle"></div>
+    </main>
+</body>
+</html>

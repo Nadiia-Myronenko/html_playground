@@ -1,0 +1,26 @@
+main {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+}
+main div {
+  border: 1px solid #f00;
+  width: 200vw;
+  height: 200vh;
+  box-sizing: border-box;
+}
+main div .green {
+  border-color: #0f0;
+}
+main div a {
+  color: #333;
+}
+main div a:hover {
+  color: #555;
+}
+footer.red .block {
+  background-color: #f00;
+}
+footer.green .block {
+  background-color: #0f0;
+}

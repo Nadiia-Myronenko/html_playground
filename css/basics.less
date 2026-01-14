@@ -1,0 +1,57 @@
+@red: #f00;
+@green: #0f0;
+@gray: #333;
+@light-gray: #555;
+
+@std-p: 1rem; // Man kann das auch für padding und so weiter benutzen.
+
+main {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+
+    div {
+        border: 1px solid @red;
+        width: 200vw;
+        height: 200vh;
+        box-sizing: border-box;
+
+        .green {
+            border-color: @green;
+        }
+
+        a {
+            color: @gray;
+
+            &:hover {
+                color: @light-gray;
+            }
+        }
+    }
+}
+
+//Das ist auch Komentar im Less
+
+//div >a
+//header + nav - nach einander folgen
+//header ~ nav - allgemeine geschwister
+
+.block(){ // wiederverwendbarer Block (Mixin). () unterdrückt die Komprimierung
+    height: 100vh;
+    width: 20vw;
+}
+footer {
+    &.red {
+        .block {
+            background-color: @red;
+        }
+    }
+
+    &.green {
+        .block {
+            background-color: @green;
+        }
+    }
+}
+
+//Funktionen in Less...

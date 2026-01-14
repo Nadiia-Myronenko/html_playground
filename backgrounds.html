@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bild1 {
+            background-image: url(img/sommer.png);
+            width: 50vw;
+            height: 50vh;
+            color: aliceblue;
+            background: cover; 
+        }
+
+        #bild2 {
+            background-image: url(img/boat.png);
+            /*background-repeat: repeat-x;*/
+            background-repeat: no-repeat;
+            width: 50vw;
+            height: 50vh;
+            color: orangered;
+            border: 1px solid #000;
+            /*background-position: 1rem 3rem;*/
+            /*background-size: auto 100%; == */
+            background-size: contain;
+            /*Bild ist volständig sichtbar*/
+        }
+
+        #bild3 {
+            /*background: color url repeat position-x position-y attachment;*/
+            background: url(img/sommer.png) no-repeat fixed;
+            width: 50vw;
+            height: 150vh;
+            color: orangered;
+            border: 1px solid #000;
+            /* background-attachment:fixed;*/
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bild1">
+        <h1>Moin Moin</h1>
+        <p>Das ist mein Traumurlaub</p>
+    </div>
+
+    <div id="bild2">
+        <h1>Moin Moin</h1>
+        <p>Das ist mein Traumurlaub</p>
+    </div>
+    <div id="bild3">
+        <h1>Moin Moin</h1>
+        <p>Das ist mein Traumurlaub</p>
+    </div>
+</body>
+
+</html>

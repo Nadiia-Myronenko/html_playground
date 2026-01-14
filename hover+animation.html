@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            /*background-image: image-set(url(/img/einfach.jpg) 1x, url(/img/retina.jpg) 2x, url(/img/top,jpg) 3x);*/
+            /*Für unterschiedliche Auflösung*/   
+        }
+
+        #lamp {
+            width: 200px;
+            height: 200px;
+            background: url(img/lampe.png) -203px 20px no-repeat;
+            border: 1px solid #000;
+        }
+
+        #lamp:hover {
+            background-position: 6px 20px;
+        }
+        #lamp2 {
+            width: 200px;
+            height: 200px;
+            background: url(img/lampe.png) -203px 20px no-repeat;
+            border: 1px solid #000;
+            animation: bulb 5s linear infinite;
+        }
+
+        @keyframes bulb {
+            from {
+                background-position: 6px 20px;
+            }
+
+            to {background-position: -203px 20px;}
+        }
+        #heart{
+            color:#f00;
+            font-size:10rem;
+            animation: heartbeat 1s infinite;
+        }
+        @keyframes heartbeat{
+            0% {
+                font-size: 10rem;
+            }
+            25% {
+                font-size: 12rem;
+            }
+            50%{
+                font-size: 10rem;
+            }
+            75%{
+                font-size: 12rem;
+            }
+            100%{
+                font-size: 10rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div id="lamp"></div>
+        <div id="lamp2"></div>
+        <div>
+            <i class= "fa fa-heart" aria-hidden="true" id="heart"></i>
+        </div>
+    </main>
+</body>
+
+</html>
