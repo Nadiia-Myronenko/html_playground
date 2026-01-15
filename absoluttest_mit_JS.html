@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .page{
+            width: 90vw;
+            height: 50vh;
+            box-shadow: 0 0 5px #000;
+            position: absolute;
+            background-color: #fff;
+            top:-100vh;
+            transition: all 1s ease-in-out;
+            /* oder oposity: 0; */
+            
+        }
+        .active{
+            top: 20vh;
+            /* oder oposity: 1; */
+        }
+        #home{background-color: red;}
+        #service{background-color: blue;}
+        #about{background-color: green;}
+        #contact{background-color: yellow;}
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><button type="button" onclick="showHome()">Home</button></li>
+            <li><button type="button" onclick="showService()">Service</button></li>
+            <li><button type="button" onclick="showAbout()">About</button></li>
+            <li><button type="button" onclick="showContact()">Contact</button></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="home" class="page"></div>
+        <div id="service" class="page"></div>
+        <div id="about" class="page"></div>
+        <div id="contact" class="page"></div>
+    </main>
+    <script>
+        let home = document.getElementById("home");
+        let service = document.getElementById("service");
+        let about = document.getElementById("about");
+        let contact = document.getElementById("contact");
+
+        function showHome(){
+            home.classList.add('active') // Klasse active hinzufügen
+            //Den anderen Seite die Klasse "active" wegnehmen
+            service.classList.remove('active');
+            about.classList.remove('active');
+            contact.classList.remove('active');
+        }
+        function showService(){
+            service.classList.add('active') // Klasse active hinzufügen
+            //Den anderen Seite die Klasse "active" wegnehmen
+            home.classList.remove('active');
+            about.classList.remove('active');
+            contact.classList.remove('active');
+        }
+        function showAbout(){
+            about.classList.add('active') // Klasse active hinzufügen
+            //Den anderen Seite die Klasse "active" wegnehmen
+            service.classList.remove('active');
+            home.classList.remove('active');
+            contact.classList.remove('active');
+        }
+        function showContact(){
+            contact.classList.add('active') // Klasse active hinzufügen
+            //Den anderen Seite die Klasse "active" wegnehmen
+            service.classList.remove('active');
+            about.classList.remove('active');
+            home.classList.remove('active');
+        }
+    </script>
+</body>
+</html>

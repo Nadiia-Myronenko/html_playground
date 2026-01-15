@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {
+            display: flex;
+            justify-content: space-between;
+            width: 640px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+           /* padding: 10px;*/
+            border: 1px solid #aaa;
+            box-sizing: border-box;
+        }
+
+        #sommer {
+            background: #aaa url(img/sommer.png) no-repeat;
+            background-size: cover;
+
+        }
+
+        #boat {
+            background: #aaa url(img/boat.png) no-repeat;
+            background-size: cover;
+        }
+
+        #palm {
+            background: #aaa url(img/sommer.png) no-repeat;
+        }
+
+        .layer {
+            background-color: rgba(255, 255, 255, 0.75);
+            padding: 20px;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            opacity: 0;
+            /* transition: property duration funktion delay;*/
+            transition: all 0.5s linear; /*transition: opocity 0.5s linear;*/
+        }
+        .layer:hover{opacity: 1;}
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="box" id="sommer">
+            <div class="layer">Sommer</div>
+        </div>
+        <div class="box" id="boat">
+            <div class="layer">Boat</div>
+        </div>
+        <div class="box" id="palm">
+            <div class="layer">Palm</div>
+        </div>
+    </main>
+</body>
+
+</html>
