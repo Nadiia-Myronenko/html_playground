@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            font-size:100%;
+        }
+        main{
+            width: 500px;
+        }
+        .accordion{
+            padding: 1rem;
+            background-color: #333;
+            width: 100%;
+            transition: all 0.5s;
+            border: none;
+            outline:none;
+            color: #eee;
+            text-align: left;
+            cursor: pointer;
+        }
+        .active, .accordion:hover{
+            /*background-color: lighten(#333, 50%); - für Less */
+            background-color:#777;
+        }
+        .accordion-panel{
+            padding: 1rem;
+            display: none;
+            background-color: #ddd;
+        }
+        .show{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <button class="accordion">Moin Moin</button>
+        <div class="accordion-panel">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti hic, vitae, modi aut ab voluptatem repudiandae soluta ex quidem quos eum. Ullam cumque, et sed ducimus quam suscipit officia vitae.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti hic, vitae, modi aut ab voluptatem repudiandae soluta ex quidem quos eum. Ullam cumque, et sed ducimus quam suscipit officia vitae.</p>
+        </div>
+        <button class="accordion">Moin Moin</button>
+        <div class="accordion-panel">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti hic, vitae, modi aut ab voluptatem repudiandae soluta ex quidem quos eum. Ullam cumque, et sed ducimus quam suscipit officia vitae.</p>
+        </div>
+        <button class="accordion">Moin Moin</button>
+        <div class="accordion-panel">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti hic, vitae, modi aut ab voluptatem repudiandae soluta ex quidem quos eum. Ullam cumque, et sed ducimus quam suscipit officia vitae.</p>
+        </div>
+    </main>
+    <script>
+        let buttons = document.getElementsByClassName('accordion')
+         for(i=0; i<buttons.length; i++){
+        buttons[i].addEventListener('click', function(){
+             let panel = this.nextElementSibling; // Nachfolgeelement
+             panel.classList.toggle('show');
+             this.classList.toggle('active');
+        });
+    }
+    </script>
+</body>
+</html>

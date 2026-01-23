@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            font-size: 100%;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .slideshow {
+            max-width: 50vw;
+            margin: auto;
+            position: relative;
+            border: 1px solid #f00;
+        }
+        
+
+        .next-btn,
+        .prev-btn {
+            position: absolute;
+            font-size: 3rem;
+            font-weight: 800;
+            color: #f00;
+            top: 50%;
+            text-decoration: none;
+            border: 1px solid #f00;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            display: block;
+            padding:0 1rem;
+
+        }
+
+        .next-btn {
+            right: 0;
+            margin-right: 1rem;
+        }
+
+        .prev-btn {
+            left: 0;
+            margin-left: 1rem;
+        }
+
+       .slideshow .slide {
+            display: none;
+            animation: fade 1.5s linear;
+    
+        }
+        .slideshow .slide.active{
+            display: block;
+        }
+
+        .slideshow .slide img {
+            width: 100%;
+        }
+
+        .slideshow .slide .text {
+            width: 100%;
+            position: absolute;
+            text-align: center;
+            bottom: 0;
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+        @keyframes fade{
+            from{
+                opacity:.2;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="slideshow">
+        <div class="slide">
+            <img src="img/sommer.png" alt="sommer">
+            <div class="text">sommer</div>
+        </div>
+        <div class="slide">
+            <img src="img/partnachklam.jpg" alt="partnachklam">
+            <div class="text">partnachklam</div>
+        </div>
+        <div class="slide">
+            <img src="img/castle.jpg" alt="castle">
+            <div class="text">castle</div>
+        </div>
+        <a href="#" class="prev-btn" onclick="prevSlide()">&#8249</a>
+        <a href="#" class="next-btn" onclick="nextSlide()">&#8250</a>
+    </header>
+    <script>
+        let slideIndex = 0;
+            showSlide()
+        function nextSlide(){
+            slideIndex++;
+            showSlide();
+        }
+        function prevSlide(){
+            slideIndex--;
+            showSlide();
+        }
+        function showSlide(){
+            let slides = document.getElementsByClassName("slide");
+            /*
+            if(slideIndex > slides.length){//das letzte  Slide erreicht
+                slideIndex=0;
+            }
+            else if(slideIndex <0){
+                slideIndex = slides.length - 1
+            }*/
+          
+           slideIndex =slideIndex % slides.length; 
+           if(slideIndex <0){
+            slideIndex =slides.length - 1;
+           }
+           console.log(slideIndex);
+
+           //Alle Bilder ausblenden
+           for(i=0; i<slides.length; i++){
+            slides[i].classList.remove("active")
+           }
+
+            slides[slideIndex].classList.add("active");
+        }
+    </script>
+</body>
+
+</html>
